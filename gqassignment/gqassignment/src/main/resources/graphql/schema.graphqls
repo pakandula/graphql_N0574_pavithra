@@ -1,0 +1,16 @@
+ type Query{
+ 	users: [userstable]
+ 	userByUsername(username: String!): userstable
+ }
+ 
+type Mutation {
+  createuser(name: String, email: String!, username: String!): userstable 
+  updateuser(email: String!, username: String!): userstable
+}
+
+ type userstable {
+ 	id: ID!
+ 	name: String!
+ 	email: String!
+ 	username: String!
+ }
